@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "AI Job Autofiller",
+  "version": "1.0",
+  "description": "Autofill job applications using AI-powered profiles.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "profile_manager.html",
+        "profile_manager.css",
+        "profile_manager.js",
+        "dashboard.html",
+        "first_user_dashboard.html",
+        "style.css",
+        "dashboard_logic.js", "icons/*.png"
+      ],
+      "matches": [ "<all_urls>" ]
+    }
+  ]
+}

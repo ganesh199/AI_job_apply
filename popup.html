@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Job Autofiller</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="header">
+        <span class="logo"></span> <div class="header-right">
+            <button class="icon-button"><img src="icons/flag.png" alt="Flag"></button>
+            <button class="icon-button"><img src="icons/settings.png" alt="Settings"></button>
+            <button class="icon-button close-button" id="closeButton"><img src="icons/close.png" alt="Close"></button>
+        </div>
+    </div>
+
+    <div class="nav-tabs">
+        <button class="tab-button active" id="autofillTab">Autofill</button>
+        <button class="tab-button" id="keywordsTab">Keywords Score</button>
+        <button class="tab-button" id="profileTab">Profile</button>
+    </div>
+
+    <div class="content-area">
+        <div id="autofillContent">
+            <div class="message-box error-box" id="autofillStatusMessage" style="display: none;">
+                <img src="icons/error-x.png" alt="Not Supported" class="message-icon">
+                <div>
+                    <p>This page is not supported for autofill</p>
+                    <p><small>View your profile or tailor your application instead!</small></p>
+                </div>
+            </div>
+            <p>Want to save this job instead? <a href="#" id="saveJobLink">❤️ Save Job</a></p>
+
+            <div class="option-list">
+                <div class="option-item" id="referenceProfileButton"> <img src="icons/reference-profile.png" alt="Reference Profile" class="item-icon"> Reference Profile <img src="icons/arrow-right.png" alt="Go" class="arrow-icon">
+                </div>
+                <div class="option-item">
+                    <img src="icons/add-description.png" alt="Add Job Description" class="item-icon"> Add Job Description <img src="icons/arrow-right.png" alt="Go" class="arrow-icon">
+                </div>
+                <div class="option-item">
+                    <img src="icons/tailor-resume.png" alt="Tailor Resume" class="item-icon"> Tailor Resume <img src="icons/arrow-right.png" alt="Go" class="arrow-icon">
+                </div>
+                <div class="option-item">
+                    <img src="icons/generate-cover.png" alt="Generate Cover Letter" class="item-icon"> Generate Cover Letter <img src="icons/arrow-right.png" alt="Go" class="arrow-icon">
+                </div>
+                <div class="option-item">
+                    <img src="icons/question-ai.png" alt="Application Question AI" class="item-icon"> Application Question AI <img src="icons/arrow-right.png" alt="Go" class="arrow-icon">
+                </div>
+                <div class="option-item">
+                    <img src="icons/submit-request.png" alt="Submit Autofill Request" class="item-icon"> Submit Autofill Request <small>for this page</small>
+                </div>
+            </div>
+        </div>
+
+        <div id="keywordsContent" style="display: none;">
+            <p>Keywords Score content will go here.</p>
+        </div>
+
+        <div id="profileContent" style="display: none;">
+            <p>Click the "Profile" button above to manage profiles in a new tab.</p>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

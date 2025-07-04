@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simplify - Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="navbar">
+            <div class="navbar-left">
+                <div class="logo">Autofill Dashboard</div>
+                <nav class="nav-links">
+                    <a href="#" class="nav-item active">Add Profile</a>
+                    <a href="#" class="nav-item">Jobs</a>
+                    <a href="#" class="nav-item">Job Tracker</a>
+                    <a href="#" class="nav-item">Documents</a>
+                    <a href="#" class="nav-item">Profile</a>
+                </nav>
+            </div>
+            <div class="navbar-right">
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-envelope"></i>
+                <i class="fas fa-question-circle"></i>
+                <div class="user-avatar"></div>
+            </div>
+        </header>
+
+        <main class="content-area">
+            <aside class="sidebar">
+                <div class="profile-summary">
+                    <div class="avatar-large"></div>
+                    <h3></h3>
+                    <p>Job Search Status</p>
+                    <p class="status-active">Actively looking</p>
+                    <i class="fas fa-pencil-alt edit-icon-small"></i>
+                </div>
+
+            </aside>
+
+            <section class="profile-sections">
+                <div class="section-card profile-util-info">
+                    <p>Create a new profile is used directly to autofill your job applications!</p>
+                </div>
+
+            </section>
+        </main>
+    </div>
+	<div id="profileModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Edit Personal Info</h2>
+            <span class="close-button">&times;</span>
+        </div>
+        <form id="profileForm">
+            <div class="form-group">
+                <label for="profileName">Profile Name*</label>
+                <input type="text" id="profileName" placeholder="e.g., Software Engineer Profile" required>
+            </div>
+            <div class="form-group">
+                <label for="firstName">First Name*</label>
+                <input type="text" id="firstName" placeholder="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name*</label>
+                <input type="text" id="lastName" placeholder="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="emailAddress">Email Address*</label>
+                <input type="email" id="emailAddress" placeholder="your.email@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="dateOfBirth">Date of Birth</label>
+                <input type="date" id="dateOfBirth">
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone</label>
+                <div class="phone-input-group">
+                    <input type="text" id="phoneNumber" placeholder="+1 000 000 0000">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" placeholder="location">
+            </div>
+            <div class="form-group">
+                <label for="addressLine1">Address</label>
+                <input type="text" id="addressLine1" placeholder="Enter Address Line 1">
+            </div>
+            <div class="form-group">
+                <label for="addressLine2">Address Line 2</label>
+                <input type="text" id="addressLine2" placeholder="Enter Address Line 2">
+            </div>
+            <div class="form-group">
+                <label for="addressLine3">Address Line 3</label>
+                <input type="text" id="addressLine3" placeholder="Enter Address Line 3">
+            </div>
+            <div class="form-group">
+                <label for="postalCode">Postal Code</label>
+                <input type="text" id="postalCode" placeholder="postalCode">
+            </div>
+			
+			<h4 style="margin-top: 30px; margin-bottom: 15px; color: #333;">Employment Information (EEO)</h4>
+            <div class="form-group">
+                <label for="ethnicity">What is your ethnicity?</label>
+                <select id="ethnicity">
+                    <option value="">Select</option>
+                    <option value="Decline to state">Decline to state</option>
+                    <option value="White">White</option>
+                    <option value="Black or African American">Black or African American</option>
+                    <option value="Asian">Asian</option>
+                    <option value="Hispanic or Latino">Hispanic or Latino</option>
+                    <option value="Native American or Alaska Native">Native American or Alaska Native</option>
+                    <option value="Native Hawaiian or Pacific Islander">Native Hawaiian or Pacific Islander</option>
+                    <option value="Two or More Races">Two or More Races</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="authWorkUS">Are you authorized to work in the US?</label>
+                <select id="authWorkUS">
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Decline to state">Decline to state</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="authWorkCanada">Are you authorized to work in Canada?</label>
+                <select id="authWorkCanada">
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Decline to state">Decline to state</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="authWorkUK">Are you authorized to work in the United Kingdom?</label>
+                <select id="authWorkUK">
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Decline to state">Decline to state</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="sponsorship">Will you now or in the future require sponsorship for employment visa status?</label>
+                <select id="sponsorship">
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Decline to state">Decline to state</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="disability">Do you have a disability?</label>
+                <select id="disability">
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Decline to state">Decline to state</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="lgbtq">Do you identify as LGBTQ+?</label>
+                <select id="lgbtq">
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Decline to state">Decline to state</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="gender">What is your gender?</label>
+                <select id="gender">
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Non-binary">Non-binary</option>
+                    <option value="Decline to state">Decline to state</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="veteran">Are you a veteran?</label>
+                <select id="veteran">
+                    <option value="">Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="Decline to state">Decline to state</option>
+                </select>
+            </div>
+            
+        </form>
+    </div>
+</div>
+			
+            <div class="modal-footer">
+                <button type="button" class="cancel-button">Cancel</button>
+                <button type="submit" class="save-button">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+    <script src="dashboard_logic.js"></script> </body>
+</html>

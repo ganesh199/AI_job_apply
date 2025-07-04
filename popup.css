@@ -1,0 +1,189 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 320px; /* Adjust width as needed */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    overflow: hidden; /* To prevent scrollbars from appearing */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3498db; /* Example color, match your logo */
+    /* You can replace this with an <img> tag for your logo */
+    width: 24px; /* Placeholder size */
+    height: 24px;
+    background-image: url('icons/simplify.png'); /* If you have a specific logo image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.header-right {
+    display: flex;
+    gap: 5px;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.icon-button:hover {
+    background-color: #eee;
+}
+
+.icon-button img {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+/* Close button specific style */
+.close-button {
+    font-size: 20px;
+    line-height: 1;
+    color: #777;
+}
+.close-button:hover {
+    color: #333;
+    background-color: #eee;
+}
+
+
+.nav-tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #ffffff;
+}
+
+.tab-button {
+    flex-grow: 1;
+    padding: 12px 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 500;
+}
+
+.tab-button:hover {
+    color: #3498db;
+}
+
+.tab-button.active {
+    color: #3498db;
+    font-weight: bold;
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #3498db;
+    border-radius: 2px 2px 0 0;
+}
+
+.content-area {
+    padding: 15px;
+    background-color: #f0f2f5;
+}
+
+.message-box {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex; /* Changed to flex for vertical alignment */
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.error-box {
+    background-color: #e7f3fd; /* Light blue */
+    border: 1px solid #bbdffb;
+    color: #3498db; /* Darker blue text */
+}
+
+/* New styles for the image icons */
+.message-icon {
+    width: 24px; /* Size for the error 'x' icon */
+    height: 24px;
+    flex-shrink: 0; /* Prevent it from shrinking */
+    margin-top: 2px; /* Small adjustment for alignment */
+}
+
+.message-box p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.message-box p small {
+    font-size: 12px;
+    color: #666;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.option-list {
+    margin-top: 20px;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.option-item:hover {
+    background-color: #f8f8f8;
+}
+
+.item-icon { /* Style for the icons within option items */
+    width: 20px; /* Adjust size as needed */
+    height: 20px;
+    margin-right: 15px;
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.arrow-icon { /* Style for the right arrow icon */
+    width: 18px; /* Adjust size as needed */
+    height: 18px;
+    margin-left: auto; /* Pushes the arrow to the right */
+    flex-shrink: 0;
+}

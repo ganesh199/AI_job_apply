@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simplify - Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="navbar">
+            <div class="navbar-left">
+                <div class="logo">Autofill Dashboard</div>
+                <nav class="nav-links">
+                    <a href="#" class="nav-item">Add Profile</a>
+                    <a href="#" class="nav-item">Jobs</a>
+                    <a href="#" class="nav-item">Job Tracker</a>
+                    <a href="#" class="nav-item">Documents</a>
+                    <a href="#" class="nav-item active">Profile</a>
+                </nav>
+            </div>
+            <div class="navbar-right">
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-envelope"></i>
+                <i class="fas fa-question-circle"></i>
+                <div class="user-avatar">GS</div>
+            </div>
+        </header>
+
+        <main class="content-area">
+            <aside class="sidebar">
+                <div class="profile-summary">
+                    <div class="avatar-large">GS</div>
+                    <h3>Ganesh Sivarimalingam</h3>
+                    <p>Job Search Status</p>
+                    <p class="status-active">Actively looking</p>
+                    <i class="fas fa-pencil-alt edit-icon-small"></i>
+                </div>
+
+                <div class="my-career-hub">
+                    <h4>My Career Hub</h4>
+                    <div class="hub-item">
+                        <a href="#">Profile</a>
+                        <span>Edit autofill information</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="hub-item">
+                        <a href="#">Personal Info</a>
+                        <span>Edit demographic data</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                    <div class="hub-item">
+                        <a href="#">Job Preferences</a>
+                        <span>Refine your job search</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+            </aside>
+
+            <section class="profile-sections">
+                <div class="section-card profile-util-info">
+                    <p>Your Simplify profile is used directly to autofill your job applications!</p>
+                </div>
+				
+				<div class="section-card">
+        <div class="section-header">
+            <h3>Personal Info</h3>
+            <i class="fas fa-pencil-alt edit-icon personal-info-edit-icon"></i> </div>
+        <div class="personal-info-grid">
+            <div class="info-item">
+                <label>First Name</label>
+                <p id="displayFirstName"></p>
+            </div>
+            <div class="info-item">
+                <label>Last Name</label>
+                <p id="displayLastName"></p>
+            </div>
+            <div class="info-item">
+                <label>Email Address</label>
+                <p id="displayEmail"></p>
+            </div>
+            <div class="info-item">
+                <label>Phone Number</label>
+                <p id="displayPhoneNumber"></p>
+            </div>
+            <div class="info-item">
+                <label>Birthday</label>
+                <p id="displayDateOfBirth"></p>
+            </div>
+            <div class="info-item">
+                <label>Location</label>
+                <p id="displayLocation"></p>
+            </div>
+            <div class="info-item">
+                <label>Address</label>
+                <p id="displayAddress1"></p>
+            </div>
+            <div class="info-item">
+                <label>Address 2</label>
+                <p id="displayAddress2"></p>
+            </div>
+            <div class="info-item">
+                <label>Address 3</label>
+                <p id="displayAddress3"></p>
+            </div>
+            <div class="info-item">
+                <label>Postal Code</label>
+                <p id="displayPostalCode"></p>
+            </div>
+        </div>
+    </div>
+	
+	<div class="section-card">
+        <div class="section-header">
+            <h3>Employment Information</h3>
+            <i class="fas fa-pencil-alt edit-icon employment-info-edit-icon"></i> </div>
+        <div class="employment-info-grid">
+            <div class="info-item">
+                <label>What is your ethnicity?</label>
+                <p id="displayEthnicity">--</p>
+            </div>
+            <div class="info-item">
+                <label>Are you authorized to work in the US?</label>
+                <p id="displayAuthWorkUS">--</p>
+            </div>
+            <div class="info-item">
+                <label>Are you authorized to work in Canada?</label>
+                <p id="displayAuthWorkCanada">--</p>
+            </div>
+            <div class="info-item">
+                <label>Are you authorized to work in the United Kingdom?</label>
+                <p id="displayAuthWorkUK">--</p>
+            </div>
+            <div class="info-item">
+                <label>Will you now or in the future require sponsorship for employment visa status?</label>
+                <p id="displaySponsorship">--</p>
+            </div>
+            <div class="info-item">
+                <label>Do you have a disability?</label>
+                <p id="displayDisability">--</p>
+            </div>
+            <div class="info-item">
+                <label>Do you identify as LGBTQ+?</label>
+                <p id="displayLGBTQ">--</p>
+            </div>
+            <div class="info-item">
+                <label>What is your gender?</label>
+                <p id="displayGender">--</p>
+            </div>
+            <div class="info-item">
+                <label>Are you a veteran?</label>
+                <p id="displayVeteran">--</p>
+            </div>
+        </div>
+    </div>
+    
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3>Resume</h3>
+                        <i class="fas fa-pencil-alt edit-icon"></i>
+                    </div>
+                    <div class="resume-info">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Ganesh_Sivarimalingam_resume</span>
+                        <span class="default-badge">Default</span>
+                        <p class="last-updated">Last updated: 7/3/2025, 7:26:19 AM PDT</p>
+                        <button class="preview-button">Preview Resume</button>
+                    </div>
+                </div>
+
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3>Work Experience</h3>
+                        <i class="fas fa-plus add-icon"></i>
+                    </div>
+                    <p>No experiences added</p>
+                </div>
+
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3>Education</h3>
+                        <i class="fas fa-plus add-icon"></i>
+                    </div>
+                    <p>No educations added</p>
+                </div>
+
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3>Projects & Outside Experience</h3>
+                        <i class="fas fa-plus add-icon"></i>
+                    </div>
+                    <p>No projects added</p>
+                </div>
+
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3>Portfolio & Links</h3>
+                        <i class="fas fa-pencil-alt edit-icon"></i>
+                    </div>
+                    <div class="link-item">
+                        <div class="icon-box linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div>
+                            <h4>LinkedIn URL</h4>
+                            <a href="https://www.linkedin.com/in/ganesh-sivarimalingam-84b46..." target="_blank">https://www.linkedin.com/in/ganesh-sivaramalingam-84b46a85/</a>
+                        </div>
+                    </div>
+                    <div class="link-item">
+                        <div class="icon-box github">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div>
+                            <h4>GitHub URL</h4>
+                            <p>--</p>
+                        </div>
+                    </div>
+                    <div class="link-item">
+                        <div class="icon-box portfolio">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div>
+                            <h4>Portfolio URL</h4>
+                            <p>--</p>
+                        </div>
+                    </div>
+                    <div class="link-item">
+                        <div class="icon-box other">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <div>
+                            <h4>Other URL</h4>
+                            <p>--</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3>Skills</h3>
+                        <i class="fas fa-pencil-alt edit-icon"></i>
+                    </div>
+                    <div class="skills-grid">
+                        <span class="skill-tag"><i></i> Agile</span>
+                        <span class="skill-tag"><i></i> C/C++</span>
+                        <span class="skill-tag"><i></i> embedded</span>
+                        <span class="skill-tag"><i></i> Python</span>
+                        <span class="skill-tag"><i></i> MATLAB</span>
+                        <span class="skill-tag"><i></i> Git</span>
+                        <span class="skill-tag"><i></i> software</span>
+                    </div>
+                </div>
+
+                <div class="section-card">
+                    <div class="section-header">
+                        <h3>Languages</h3>
+                        <i class="fas fa-pencil-alt edit-icon"></i>
+                    </div>
+                    <div class="languages-grid">
+                        <span class="language-tag">Tamil</span>
+                        <span class="language-tag">Telugu</span>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+	
+	<div id="profileModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2>Edit Personal Info</h2>
+            <span class="close-button">&times;</span>
+        </div>
+        <form id="profileForm">
+            <div class="form-group">
+                <label for="profileName">Profile Name*</label>
+                <input type="text" id="profileName" placeholder="e.g., Software Engineer Profile" required>
+            </div>
+            <div class="form-group">
+                <label for="firstName">First Name*</label>
+                <input type="text" id="firstName" placeholder="Ganesh" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name*</label>
+                <input type="text" id="lastName" placeholder="Sivarimalingam" required>
+            </div>
+            <div class="form-group">
+                <label for="emailAddress">Email Address*</label>
+                <input type="email" id="emailAddress" placeholder="your.email@example.com" required>
+            </div>
+            <div class="form-group">
+                <label for="dateOfBirth">Date of Birth</label>
+                <input type="date" id="dateOfBirth">
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone</label>
+                <div class="phone-input-group">
+                    <input type="text" id="phoneNumber" placeholder="+1 413 310 8182">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" placeholder="Concord, CA, USA">
+            </div>
+            <div class="form-group">
+                <label for="addressLine1">Address</label>
+                <input type="text" id="addressLine1" placeholder="780 Oak Grove Rd, APT A100">
+            </div>
+            <div class="form-group">
+                <label for="addressLine2">Address Line 2</label>
+                <input type="text" id="addressLine2" placeholder="Enter Address Line 2">
+            </div>
+            <div class="form-group">
+                <label for="addressLine3">Address Line 3</label>
+                <input type="text" id="addressLine3" placeholder="Enter Address Line 3">
+            </div>
+            <div class="form-group">
+                <label for="postalCode">Postal Code</label>
+                <input type="text" id="postalCode" placeholder="94518">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="cancel-button">Cancel</button>
+                <button type="submit" class="save-button">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+	
+    <script src="dashboard_logic.js"></script> </body>
+</html>
