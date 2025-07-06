@@ -1,0 +1,891 @@
+/* Combined styles from popup.css and style.css */
+
+/* === POPUP STYLES === */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 320px;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #3498db;
+    width: 24px;
+    height: 24px;
+    background-image: url('icons/simplify.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.header-right {
+    display: flex;
+    gap: 5px;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.icon-button:hover {
+    background-color: #eee;
+}
+
+.icon-button img {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+.close-button {
+    font-size: 20px;
+    line-height: 1;
+    color: #777;
+}
+
+.close-button:hover {
+    color: #333;
+    background-color: #eee;
+}
+
+.nav-tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #ffffff;
+}
+
+.tab-button {
+    flex-grow: 1;
+    padding: 12px 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    color: #555;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 500;
+}
+
+.tab-button:hover {
+    color: #3498db;
+}
+
+.tab-button.active {
+    color: #3498db;
+    font-weight: bold;
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #3498db;
+    border-radius: 2px 2px 0 0;
+}
+
+.content-area {
+    padding: 15px;
+    background-color: #f0f2f5;
+}
+
+.message-box {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.error-box {
+    background-color: #e7f3fd;
+    border: 1px solid #bbdffb;
+    color: #3498db;
+}
+
+.message-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.message-box p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.message-box p small {
+    font-size: 12px;
+    color: #666;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.option-list {
+    margin-top: 20px;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.option-item:hover {
+    background-color: #f8f8f8;
+}
+
+.item-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.arrow-icon {
+    width: 18px;
+    height: 18px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+/* === DASHBOARD STYLES === */
+
+/* Basic Resets and Global Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header/Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #eee;
+    z-index: 1000;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-right: 30px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #4CAF50;
+}
+
+.nav-item.active {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.nav-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #4CAF50;
+    border-radius: 2px;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-right .fas {
+    font-size: 18px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.navbar-right .fas:hover {
+    color: #4CAF50;
+}
+
+.user-avatar {
+    background-color: #4CAF50;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Main Content Area Layout */
+.content-area {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    gap: 20px;
+    max-width: 1300px;
+    margin: 20px auto;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    flex: 0 0 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    box-sizing: border-box;
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.profile-summary {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.avatar-large {
+    background-color: #4CAF50;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 auto 15px auto;
+}
+
+.profile-summary h3 {
+    margin: 10px 0 5px 0;
+    color: #333;
+}
+
+.profile-summary p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+.profile-summary .status-active {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.edit-icon-small {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #999;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.my-career-hub,
+.my-profile-strength,
+.upgrade-premium {
+    padding-top: 20px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.upgrade-premium {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.hub-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+}
+
+.hub-item:first-of-type {
+    border-top: none;
+}
+
+.hub-item a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    flex-grow: 1;
+}
+
+.hub-item span {
+    font-size: 13px;
+    color: #777;
+    margin-left: 10px;
+}
+
+.hub-item .fas {
+    color: #bbb;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+/* Right Content Sections Styling */
+.profile-sections {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+}
+
+.profile-util-info {
+    background-color: #e0f2f7;
+    color: #2196F3;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.section-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.edit-icon, .add-icon {
+    color: #999;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.edit-icon:hover, .add-icon:hover {
+    color: #555;
+}
+
+/* Personal Info Grid */
+.personal-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 30px;
+    margin-top: 15px;
+}
+
+.personal-info-grid .info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.personal-info-grid .info-item label {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.personal-info-grid .info-item p {
+    margin: 0;
+    font-size: 15px;
+    color: #333;
+    word-break: break-word;
+}
+
+/* Employment Info Grid */
+.employment-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 30px;
+    margin-top: 15px;
+}
+
+.employment-info-grid .info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.employment-info-grid .info-item label {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.employment-info-grid .info-item p {
+    margin: 0;
+    font-size: 15px;
+    color: #333;
+    word-break: break-word;
+}
+
+/* Resume Info */
+.resume-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.resume-info .fas.fa-file-alt {
+    font-size: 24px;
+    color: #777;
+    margin-right: 15px;
+}
+
+.resume-info span {
+    font-weight: 500;
+    color: #333;
+    margin-right: 10px;
+}
+
+.default-badge {
+    background-color: #e0e0e0;
+    color: #555;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+.resume-info .last-updated {
+    font-size: 13px;
+    color: #777;
+    margin-left: auto;
+}
+
+.preview-button {
+    background-color: #e0f2f7;
+    color: #2196F3;
+    border: 1px solid #2196F3;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-left: 20px;
+}
+
+.preview-button:hover {
+    background-color: #2196F3;
+    color: #fff;
+}
+
+/* Links */
+.link-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.link-item:last-child {
+    margin-bottom: 0;
+}
+
+.icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.icon-box.linkedin { background-color: #0A66C2; }
+.icon-box.github { background-color: #333; }
+.icon-box.portfolio { background-color: #8E44AD; }
+.icon-box.other { background-color: #999; }
+
+.link-item h4 {
+    margin: 0;
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.link-item a, .link-item p {
+    font-size: 14px;
+    color: #555;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.link-item a:hover {
+    text-decoration: underline;
+    color: #4CAF50;
+}
+
+/* Skills and Languages */
+.skills-grid, .languages-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.skill-tag, .language-tag {
+    background-color: #f0f2f5;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 600px;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    background-color: #f8f8f8;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.modal-header .close-button {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-header .close-button:hover,
+.modal-header .close-button:focus {
+    color: #333;
+    text-decoration: none;
+}
+
+.modal form {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+    font-size: 14px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="date"],
+.form-group select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-6.1%200-12.1%203.2-15.2%208.7-3.1%205.6-2.5%2012.3%201.5%2017.5l123.6%20123.6c4.2%204.2%209.8%206.4%2015.5%206.4s11.1-2.2%2015.5-6.4L285.6%2094c4-5.2%204.6-11.9%201.5-17.5z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 12px auto;
+}
+
+.phone-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.phone-input-group input {
+    flex-grow: 1;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    background-color: #f8f8f8;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.cancel-button {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.cancel-button:hover {
+    background-color: #bbb;
+}
+
+.save-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.save-button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .content-area {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: static;
+        margin-bottom: 15px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .navbar-left {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+
+    .navbar-right {
+        width: 100%;
+        justify-content: flex-end;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .personal-info-grid,
+    .employment-info-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .modal-content {
+        width: 95%;
+    }
+
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+        margin-right: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .nav-item {
+        font-size: 14px;
+    }
+
+    .navbar-right {
+        gap: 15px;
+    }
+
+    .user-avatar {
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .content-area {
+        padding: 10px;
+    }
+
+    .sidebar {
+        padding: 15px;
+    }
+
+    .section-card {
+        padding: 15px;
+    }
+
+    .section-header h3 {
+        font-size: 16px;
+    }
+}
